@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background: #3D3B40;
+}
+header {
+    background: black;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    
+}
+header .logo {
+    color:green;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+}
+header nav ul {
+    display: flex;
+    background-color: black;
+}
+header nav ul li a {
+    display: inline-block;
+    color: green;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: green;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+    
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: green;
+}
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: black;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+        z-index: 1000;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+   
+}
+
+main {
+    background-color: #3D3B40; /* Change the background color of the main content */
+    padding-top: 80px; /* Adjust padding to avoid content being hidden behind the navbar */
+    display: block;
+    min-height: calc(100vh - 80px); /* Calculate the height of the main content */
+}
+
+/* Add additional styles for the accordion, if needed */
+.accordion {
+    margin: 20px;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.skill-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    gap:5px;
+}
